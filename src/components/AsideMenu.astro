@@ -1,1 +1,17 @@
-<div class='bordeRojo'>desde asidemenu</div>
+---
+import Logo from '@/components/icons/LogoAuxCompleto.astro'
+---
+
+<div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full'>
+	<div class='p-4'>
+		<Logo />
+	</div>
+
+	 desde asidemenu
+</div>
+
+<style>
+	:global(.light) .asideMenu {
+		background-color: #f0f0f0;
+	}
+</style>

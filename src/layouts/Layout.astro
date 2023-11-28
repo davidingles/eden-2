@@ -1,5 +1,6 @@
 ---
 import AsideMenu from '@/components/AsideMenu.astro'
+import FooterMenu from '@/components/FooterMenu.astro'
 interface Props {
 	title: string
 }
@@ -30,13 +31,36 @@ const { title } = Astro.props
 		/>
 		<title>{title}</title>
 	</head>
-	<body class='p-2'>
-		<div class='bordeVerde colorUno p-2'>
+	<body class='p-2 body'>
+		<div
+			class='asideMenu bordeVerde colorUno p-2 [grid-area:aside] flex flex-col overflow-y-auto w-full'
+		>
 			<AsideMenu />
 		</div>
-		<div class='p-2 bordeVerde'>
+		<div
+			class='mainMenu p-2 bordeVerde [grid-area:main] overflow-y-auto w-full h-screen'
+		>
 			<slot />
 		</div>
+		<div class='footerMenu bordeVerde colorUno p-2 [grid-area:footer] h-[88px]'>
+			<FooterMenu />
+		</div>
+		<style>
+			.body {
+				display: grid;
+				grid-template-areas:
+					'aside main main'
+					'footer footer footer';
+				grid-template-columns: 350px 1fr;
+				grid-template-rows: 1fr auto;
+			}
+			.asideMenu {
+				height: calc(100vh - 104px);
+			}
+			.mainMenu {
+				height: calc(100vh - 104px);
+			}
+		</style>
 		<style is:global>
 			:root {
 				--accent: 136, 58, 234;
@@ -45,8 +69,15 @@ const { title } = Astro.props
 			}
 			html {
 				font-family: system-ui, sans-serif;
-				background: #13151a;
+				background-color: black;
 				background-size: 224px;
+			}
+			html .light {
+				background: #fff;
+				color: black;
+			}
+			.light {
+				background: #fff;
 			}
 			.bordeRojo {
 				border: 1px solid red;
