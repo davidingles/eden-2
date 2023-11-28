@@ -3,8 +3,10 @@ import ToggleTheme from '@/components/ToggleTheme.astro'
 ---
 
 <div class='divToggleTheme flex flex-row rounded-lg'>
-	<div>
+	<div class='divSinNombre flex flex-1 justify-center items-center'>
 		desde el header
+	</div>
+	<div class='flex'>
 		<ToggleTheme />
 	</div>
 </div>
@@ -12,5 +14,10 @@ import ToggleTheme from '@/components/ToggleTheme.astro'
 <style>
 	:global(.light) .divToggleTheme {
 		background-color: #fff;
+	}
+	.divSinNombre {
+		/* <!-- //! OJO!!! el ErasITC no funciona como string --> */
+		font-family: ErasITC;
+		font-size: 3rem;
 	}
 </style>

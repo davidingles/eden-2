@@ -1,13 +1,15 @@
 ---
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
+import BodyAsideMenu from '@/components/BodyAsideMenu.astro'
 ---
 
-<div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full'>
+<div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full flex flex-col'>
 	<div class='p-4'>
 		<Logo />
 	</div>
-
-	 desde asidemenu
+	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg'>
+		<BodyAsideMenu />
+	</div>
 </div>
 
 <style>

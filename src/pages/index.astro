@@ -1,15 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import HeaderMenu from '@/components/HeaderMenu.astro'
+import HeaderMenu from '@/components/header/HeaderMenu.astro'
+import BodyIndex from '@/components/BodyIndex.astro'
 import Card from '../components/Card.astro'
 ---
 
 <Layout title='Welcome to Astro.'>
-	<div class='divBody colorDos bordeRojo rounded-lg h-full bg-zinc-900'>
+	<div
+		class='divBody colorDos bordeRojo rounded-lg h-full bg-zinc-900 flex flex-col'
+	>
 		<div class='bordeVerde m-2 rounded-lg'>
 			<HeaderMenu />
 		</div>
-		 desde el index
+		<div class='bordeVerde m-2 p-2 rounded-lg flex flex-1'>
+			<BodyIndex />
+		</div>
 	</div>
 </Layout>
 
