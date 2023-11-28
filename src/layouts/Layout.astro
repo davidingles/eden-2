@@ -1,0 +1,65 @@
+---
+import AsideMenu from '@/components/AsideMenu.astro'
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='es'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Astro description'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/favicon.svg'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class='divAsideMenu borde colorUno'>
+			<AsideMenu />
+		</div>
+		<slot />
+		<style>
+			/* .divAsideMenu {
+				color: white;
+			} */
+		</style>
+		<style is:global>
+			:root {
+				--accent: 136, 58, 234;
+				--auxi1: rgb(223 172 18);
+				--auxi2: rgb(0 129 74);
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background: #13151a;
+				background-size: 224px;
+			}
+			.borde {
+				border: 1px solid red;
+			}
+			.colorUno {
+				color: var(--auxi1);
+			}
+			.colorDos {
+				color: var(--auxi2);
+			}
+		</style>
+	</body>
+</html>
