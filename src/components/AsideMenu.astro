@@ -2,6 +2,29 @@
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
 import BodyAsideMenu from '@/components/BodyAsideMenu.astro'
 import CardAside from './cards/CardAside.astro'
+
+const menu = [
+	{
+		title: 'Inicio',
+		icon: '/svg/iconos-de-menu/Home.svg',
+		link: '/',
+	},
+	{
+		title: 'Nosotros',
+		icon: '/svg/iconos-de-menu/Cog.svg',
+		link: '/nosotros',
+	},
+	{
+		title: 'Servicios',
+		icon: '/svg/iconos-de-menu/Phone.svg',
+		link: '/servicios',
+	},
+	{
+		title: 'Contacto',
+		icon: '/svg/iconos-de-menu/Users.svg',
+		link: '/contacto',
+	},
+]
 ---
 
 <div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full flex flex-col'>
@@ -13,7 +36,7 @@ import CardAside from './cards/CardAside.astro'
 			<BodyAsideMenu />
 		</div>
 		<div class='p-2'>
-			<CardAside />
+			<CardAside menu={menu} />
 		</div>
 	</div>
 </div>
