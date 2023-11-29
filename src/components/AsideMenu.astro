@@ -1,14 +1,20 @@
 ---
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
 import BodyAsideMenu from '@/components/BodyAsideMenu.astro'
+import CardAside from './cards/CardAside.astro'
 ---
 
 <div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full flex flex-col'>
 	<div class='p-4'>
 		<Logo />
 	</div>
-	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg'>
-		<BodyAsideMenu />
+	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg flex-col'>
+		<div>
+			<BodyAsideMenu />
+		</div>
+		<div class='p-2'>
+			<CardAside />
+		</div>
 	</div>
 </div>
 
