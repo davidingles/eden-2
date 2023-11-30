@@ -14,8 +14,8 @@
       "@/pages/*": [
         "src/pages/*"
       ],
-      "@/public/*": [
-        "public/*"
+      "@/svg/*": [
+        "public/svg/*"
       ]
     },
     "jsx": "react-jsx",
