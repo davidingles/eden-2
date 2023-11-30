@@ -8,18 +8,23 @@ function SliderReact() {
     },
     {
       original: 'img/nav.jpg',
+      thumbnail: 'img/nav.jpg',
     },
     {
       original: 'img/nave.jpg',
+      thumbnail: 'img/nave.jpg',
     },
     {
       original: 'img/cielo.jpg',
+      thumbnail: 'img/cielo.jpg',
     },
     {
       original: 'img/cielo.jpg',
+      thumbnail: 'img/cielo.jpg',
     },
     {
       original: 'img/cielo.jpg',
+      thumbnail: 'img/cielo.jpg',
     },
   ]
   return (
@@ -33,7 +38,7 @@ function SliderReact() {
         autoPlay={true}
         slideDuration={1000}
         slideInterval={3000}
-
+        thumbnailPosition={'bottom'}
       />
     </div>
   )

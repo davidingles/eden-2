@@ -2,6 +2,8 @@
 import Icon from '@/components/icons/LogoAuxCompleto.astro'
 import IconHome from '@/components/icons/IconHome.astro'
 import IconNosotros from '@/components/icons/IconNosotros.astro'
+import IconServices from '@/components/icons/IconServices.astro'
+import IconContact from '@/components/icons/IconContact.astro'
 
 interface MenuItem {
 	link: string
@@ -22,19 +24,26 @@ const { menu } = Astro.props
 			<div class='bordeRojo rounded-lg h-[112px] flex justify-center items-center my-4'>
 				<a
 					href={item.link}
-					class='flex flex-col justify-center items-center'
+					class='flex flex-col flex-1 justify-center items-center'
 				>
 					<div class='flex flex-row justify-center items-center'>
 						<span class='text-xl p-4'>{item.title}</span>
 					</div>
 				</a>
 
-				<div class="w-20">
-					<img
-						src=`svg/${item.icon}.svg`
-						alt=''
-					/>
+				<div class='w-10 mr-4'>
+					{item.icon === 'us' && <IconNosotros />}
+					{item.icon === 'home' && <IconHome />}
+					{item.icon === 'services' && <IconServices />}
+					{item.icon === 'contact' && <IconContact />}
 				</div>
 			</div>
 		))
 }
+
+<!-- //TODO: Muy interesanto, pues no uso img y añdo las classes en el svg -->
+<!-- <div class='w-10'>
+  <svg class='h-full w-full' viewBox='0 0 24 24' fill='#ff0'>
+    <use xlink:href={`svg/${item.icon}.svg`} />
+  </svg>
+</div> -->
