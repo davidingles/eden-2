@@ -1,6 +1,7 @@
 ---
 import AsideMenu from '@/components/AsideMenu.astro'
 import FooterMenu from '@/components/footer/FooterMenu.astro'
+import Footer from '@/components/footer/footer-old/Footer.astro'
 interface Props {
 	title: string
 }
@@ -45,12 +46,16 @@ const { title } = Astro.props
 		<div class='footerMenu bordeVerde colorUno p-2 [grid-area:footer] h-[88px]'>
 			<FooterMenu />
 		</div>
+		<div class='bordeRojo [grid-area:aviso] p-2'>
+			<Footer />
+		</div>
 		<style>
 			.body {
 				display: grid;
 				grid-template-areas:
 					'aside main main'
-					'footer footer footer';
+					'footer footer footer'
+					'aviso aviso aviso';
 				grid-template-columns: 350px 1fr;
 				grid-template-rows: 1fr auto;
 			}
