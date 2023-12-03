@@ -24,6 +24,11 @@ const menu = [
 		icon: 'contact',
 		link: '/contacto',
 	},
+	{
+		title: 'Catálogo',
+		icon: 'catalogo',
+		link: '/catalogo'
+	}
 ]
 ---
 
@@ -32,11 +37,11 @@ const menu = [
 		<Logo />
 	</div>
 	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg flex-col'>
-		<div>
-			<BodyAsideMenu />
-		</div>
 		<div class='p-2'>
 			<CardAside menu={menu} />
+		</div>
+		<div class='flex flex-1'>
+			<BodyAsideMenu />
 		</div>
 	</div>
 </div>
@@ -44,5 +49,6 @@ const menu = [
 <style>
 	:global(.light) .asideMenu {
 		background-color: #f0f0f0;
+		color: #202020;
 	}
 </style>

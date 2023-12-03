@@ -23,7 +23,7 @@ const { title } = Astro.props
 		<link
 			rel='icon'
 			type='image/svg+xml'
-			href='/favicon.svg'
+			href='/svg/favicon.auxiliar.svg'
 		/>
 		<meta
 			name='generator'
@@ -33,7 +33,7 @@ const { title } = Astro.props
 	</head>
 	<body class='p-2 body'>
 		<div
-			class='asideMenu bordeVerde colorUno p-2 [grid-area:aside] flex flex-col overflow-y-auto w-full'
+			class='asideMenu bordeVerde p-2 [grid-area:aside] flex flex-col overflow-y-auto w-full'
 		>
 			<AsideMenu />
 		</div>
@@ -71,9 +71,10 @@ const { title } = Astro.props
 				font-family: 'CircularStd', system-ui, sans-serif;
 				background-color: black;
 				background-size: 224px;
+				color: white;
 			}
 			html .light {
-				background: #fff;
+				background-color: #fff;
 				color: black;
 			}
 			.light {

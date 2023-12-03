@@ -4,6 +4,7 @@ import IconHome from '@/components/icons/IconHome.astro'
 import IconNosotros from '@/components/icons/IconNosotros.astro'
 import IconServices from '@/components/icons/IconServices.astro'
 import IconContact from '@/components/icons/IconContact.astro'
+import IconCatalogo from '@/components/icons/IconCatalogo.astro'
 
 interface MenuItem {
 	link: string
@@ -36,14 +37,8 @@ const { menu } = Astro.props
 					{item.icon === 'home' && <IconHome />}
 					{item.icon === 'services' && <IconServices />}
 					{item.icon === 'contact' && <IconContact />}
+					{item.icon === 'catalogo' && <IconCatalogo />}
 				</div>
 			</div>
 		))
 }
-
-<!-- //TODO: Muy interesanto, pues no uso img y añdo las classes en el svg -->
-<!-- <div class='w-10'>
-  <svg class='h-full w-full' viewBox='0 0 24 24' fill='#ff0'>
-    <use xlink:href={`svg/${item.icon}.svg`} />
-  </svg>
-</div> -->
