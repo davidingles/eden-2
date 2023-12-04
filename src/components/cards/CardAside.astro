@@ -5,6 +5,7 @@ import IconNosotros from '@/components/icons/IconNosotros.astro'
 import IconServices from '@/components/icons/IconServices.astro'
 import IconContact from '@/components/icons/IconContact.astro'
 import IconCatalogo from '@/components/icons/IconCatalogo.astro'
+import BtnAdelante from '@/components/botones-sliders/BtnAdelante.astro'
 
 interface MenuItem {
 	link: string
@@ -22,13 +23,13 @@ const { menu } = Astro.props
 {
 	menu &&
 		menu.map((item: MenuItem) => (
-			<div class='bordeRojo rounded-lg h-[112px] flex justify-center items-center my-4'>
+			<div class='bordeRojo rounded-lg h-[66px] flex justify-center items-center my-2'>
 				<a
 					href={item.link}
 					class='flex flex-col flex-1 justify-center items-center'
 				>
-					<div class='flex flex-row justify-center items-center'>
-						<span class='text-xl p-4'>{item.title}</span>
+					<div class='flex flex-row text-xl p-4 justify-center items-center'>
+						<BtnAdelante menus={item.title} />
 					</div>
 				</a>
 
