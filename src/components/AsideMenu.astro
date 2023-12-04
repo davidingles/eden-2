@@ -33,9 +33,28 @@ const menu = [
 ---
 
 <div class='asideMenu bordeRojo rounded-lg bg-zinc-900 h-full flex flex-col'>
-	<div class='p-4'>
+	<!--  -->
+	<!--  -->
+	<!-- //!!LOGO DEL ASIDE============ -->
+	<div class='p-4 logo-animation'>
 		<Logo />
 	</div>
+	<style>
+		@keyframes logoFadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		.logo-animation {
+			animation: logoFadeIn 1s ease-in-out;
+		}
+	</style>
+	<!-- //!!LOGO===================== -->
+	<!--  -->
+	<!--  -->
 	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg flex-col'>
 		<div class='p-2'>
 			<CardAside menu={menu} />

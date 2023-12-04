@@ -1,5 +1,4 @@
 ---
-import Icon from '@/components/icons/LogoAuxCompleto.astro'
 import IconHome from '@/components/icons/IconHome.astro'
 import IconNosotros from '@/components/icons/IconNosotros.astro'
 import IconServices from '@/components/icons/IconServices.astro'
@@ -26,20 +25,40 @@ const { menu } = Astro.props
 			<div class='bordeRojo rounded-lg h-[66px] flex justify-center items-center my-2'>
 				<a
 					href={item.link}
-					class='flex flex-col flex-1 justify-center items-center'
+					class='flex flex-row flex-1 justify-center items-center'
 				>
-					<div class='flex flex-row text-xl p-4 justify-center items-center'>
+					<div class=' text-xl p-4'>
 						<BtnAdelante menus={item.title} />
 					</div>
-				</a>
 
-				<div class='w-10 mr-4'>
-					{item.icon === 'us' && <IconNosotros />}
-					{item.icon === 'home' && <IconHome />}
-					{item.icon === 'services' && <IconServices />}
-					{item.icon === 'contact' && <IconContact />}
-					{item.icon === 'catalogo' && <IconCatalogo />}
-				</div>
+					<div class='w-10 mr-4'>
+						{item.icon === 'us' && (
+							<div class='hover:rotate-6  hover:scale-110'>
+								<IconNosotros />
+							</div>
+						)}
+						{item.icon === 'home' && (
+							<div class='hover:rotate-6  hover:scale-110'>
+								<IconHome />
+							</div>
+						)}
+						{item.icon === 'services' && (
+							<div class='hover:rotate-6  hover:scale-110'>
+								<IconServices />
+							</div>
+						)}
+						{item.icon === 'contact' && (
+							<div class='hover:rotate-6  hover:scale-110'>
+								<IconContact />
+							</div>
+						)}
+						{item.icon === 'catalogo' && (
+							<div class='hover:rotate-6  hover:scale-110'>
+								<IconCatalogo />
+							</div>
+						)}
+					</div>
+				</a>
 			</div>
 		))
 }

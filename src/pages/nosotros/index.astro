@@ -1,15 +1,29 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import BodyIndex from '@/components/BodyIndex.astro'
+import HeaderMenu from '@/components/header/HeaderMenu.astro'
 ---
 
-<Layout>
-  <div>
-    desde nosotros
-  </div>
-  		<!-- //!: body=================================== -->
-      <div class='bordeVerde m-2 p-2 rounded-lg flex flex-1'>
-        <BodyIndex />
-      </div>
-      <!-- //!: body=================================== -->
+<Layout title='Sobre nosotros'>
+	<div>desde nosotros</div>
+	<!--  -->
+	<!--  -->
+	<!-- //!: body=================================== -->
+	<div class='bodyIndex bordeVerde m-2 p-2 rounded-lg flex flex-1'>
+		prueba
+		<BodyIndex />
+	</div>
+	<!-- //!: body=================================== -->
+	<!--  -->
+	<!--  -->
 </Layout>
+
+<style>
+	:global(.light) .bodyIndex {
+		background-color: #f5f5f5;
+		color: red;
+	}
+	.bodyIndex {
+		color: orange;
+	}
+</style>
