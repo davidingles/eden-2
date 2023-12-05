@@ -1,6 +1,5 @@
-<button
-	data-text='Awesome'
-	class='button'
+<a
+	class=''
 	href='/contacto'
 >
 	<span class='actual-text text-[var(--auxi2)]'>&nbsp;968 693 575&nbsp;</span>
@@ -9,11 +8,11 @@
 		aria-hidden='true'
 		>&nbsp;968 693 575&nbsp;</span
 	>
-</button>
+</a>
 
 <style>
 	/* === removing default button style ===*/
-	.button {
+	a {
 		text-wrap: nowrap;
 		margin: 0;
 		height: auto;
@@ -22,29 +21,33 @@
 	}
 
 	/* button styling */
-	.button {
+	a {
 		letter-spacing: 3px;
+
 		text-decoration: none;
-		font-size: 3rem;
+		font-size: 2.5rem;
 		font-family: 'Arial';
 		position: relative;
 		/* color: transparent; */
 		/* -webkit-text-stroke: 1px var(--text-stroke-color); */
 	}
+	.actual-text {
+	}
 	/* this is the text, when you hover on button */
 	.hover-text {
 		position: absolute;
-		top: -4px;
-		color: var(--auxi1);
+		color: transparent;
 		width: 0%;
-		inset: 0;
+		inset: 0 0 0 0;
 		border-right: 4px solid var(--auxi1);
 		overflow: hidden;
 		transition: 1s;
-		-webkit-text-stroke: 2px var(--auxi1);
+		-webkit-text-stroke: 0px var(--auxi1);
+		background-color: var(--auxi1);
+		mix-blend-mode: multiply;
 	}
 	/* hover */
-	.button:hover .hover-text {
+	a:hover .hover-text {
 		width: 100%;
 	}
 </style>
