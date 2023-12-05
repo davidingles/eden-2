@@ -47,13 +47,13 @@ const { title } = Astro.props
 		<!--  -->
 		<!-- //!!!:BODY ================================= -->
 		<div
-			class='mainMenu p-2 bordeVerde [grid-area:main] overflow-y-auto w-full h-screen'
+			class='mainMenu p-2 bordeVerde [grid-area:main] overflow-y-auto w-full flex flex-col'
 		>
-			<!-- //!: header=================================== -->
-			<div class='bordeVerde m-2 rounded-lg'>
+			<!-- //?: header=================================== -->
+			<div class='bordeRojo m-2 rounded-lg'>
 				<HeaderMenu />
 			</div>
-			<!-- //!: header=================================== -->
+			<!-- //?: header=================================== -->
 			<slot />
 		</div>
 		<!-- //!!!:BODY ================================= -->
