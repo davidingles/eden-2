@@ -1,51 +1,50 @@
-
-    <a data-text="Awesome" class="button" href="/#contacto">
-        <span class="actual-text text-[var(--auxiliar2)]">&nbsp;968 693 575&nbsp;</span>
-        <span class="hover-text" aria-hidden="true">&nbsp;968 693 575&nbsp;</span>
-    </a>
-
+<button
+	data-text='Awesome'
+	class='button'
+	href='/contacto'
+>
+	<span class='actual-text text-[var(--auxi2)]'>&nbsp;968 693 575&nbsp;</span>
+	<span
+		class='hover-text'
+		aria-hidden='true'
+		>&nbsp;968 693 575&nbsp;</span
+	>
+</button>
 
 <style>
-/* === removing default button style ===*/
-.button {
-    text-wrap: nowrap;
-  margin: 0;
-  height: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-}
+	/* === removing default button style ===*/
+	.button {
+		text-wrap: nowrap;
+		margin: 0;
+		height: auto;
+		padding: 0;
+		border: none;
+	}
 
-/* button styling */
-.button {
-  --border-right: 3px;
-  --text-stroke-color: rgba(239, 23, 23, 0.6);
-  --animation-color: var(--auxiliar1);
-  --fs-size: 2em;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: "Arial";
-  position: relative;
-  /* color: transparent; */
-  /* -webkit-text-stroke: 1px var(--text-stroke-color); */
-}
-/* this is the text, when you hover on button */
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
-  overflow: hidden;
-  transition: 1s;
-  -webkit-text-stroke: 1px var(--animation-color);
-}
-/* hover */
-.button:hover .hover-text {
-  width: 100%;
-  /* filter: drop-shadow(0 0 12px #ffea00) */
-}
+	/* button styling */
+	.button {
+		letter-spacing: 3px;
+		text-decoration: none;
+		font-size: 3rem;
+		font-family: 'Arial';
+		position: relative;
+		/* color: transparent; */
+		/* -webkit-text-stroke: 1px var(--text-stroke-color); */
+	}
+	/* this is the text, when you hover on button */
+	.hover-text {
+		position: absolute;
+		top: -4px;
+		color: var(--auxi1);
+		width: 0%;
+		inset: 0;
+		border-right: 4px solid var(--auxi1);
+		overflow: hidden;
+		transition: 1s;
+		-webkit-text-stroke: 2px var(--auxi1);
+	}
+	/* hover */
+	.button:hover .hover-text {
+		width: 100%;
+	}
 </style>

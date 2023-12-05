@@ -6,20 +6,30 @@ import Layout from '../layouts/Layout.astro'
 	<div
 		class='divBody colorDos bordeRojo rounded-lg h-full bg-zinc-900 flex flex-col'
 	>
-		<div>
+		<button onclick={() => console.log('holaaa')}>
 			<video
-				class='w-full object-fill rounded-lg'
-				src='/videos/cajas-en-movimiento.mp4'
+				id=' miVideo'
+				class='w-full
+				object-fill rounded-lg'
 				autoplay
 				loop
 				muted
-			></video>
-		</div>
+				><source src='/videos/cajas-en-movimiento.mp4' /></video
+			>
+		</button>
 	</div>
+	<script>
+		function david() {
+			const video = document.getElementById('miVideo') as HTMLVideoElement
+			video.autoplay = false
+			console.log('dav')
+		}
+	</script>
+	<style>
+		:global(.light) .divBody {
+			background-color: #f0f0f0;
+		}
+	</style>
 </Layout>
 
-<style>
-	:global(.light) .divBody {
-		background-color: #f0f0f0;
-	}
-</style>
+<!-- controls='true' -->
