@@ -4,14 +4,20 @@ import TextoAnimadoTelefono from '@/components/botones-sliders/TextoAnimadoTelef
 ---
 
 <div class='divToggleTheme flex flex-row rounded-lg'>
+	<!--  -->
+	<!--  -->
+	<!-- //!titulos y telefono============== -->
 	<div class='divSinNombre flex flex-1 justify-center items-center'>
-		<p class='auxi mr-6 text-[var(--auxi1)] flex-nowrap text-[2.5rem]'>
+		<p class='auxi mr-4 text-[var(--auxi1)] text-[1.5rem]'>
 			Auxiliar Manipuladora del Cartón
 		</p>
 		<span class=''>
 			<TextoAnimadoTelefono />
 		</span>
 	</div>
+	<!--  -->
+	<!--  -->
+	<!-- //!theme========================= -->
 	<div class='pr-4'>
 		<ToggleTheme />
 	</div>
@@ -25,6 +31,7 @@ import TextoAnimadoTelefono from '@/components/botones-sliders/TextoAnimadoTelef
 		/* <!-- //! OJO!!! el ErasITC no funciona como string --> */
 		font-family: ErasITC;
 		font-size: 3rem;
+		text-wrap: nowrap;
 	}
 	:global(.light) .auxi {
 		color: var(--auxi2);

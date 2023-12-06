@@ -1,35 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Video from '@/components/Video.astro'
 ---
 
 <Layout title='Auxiliar Manipuladora del Cartón'>
 	<div
 		class='divBody colorDos bordeRojo rounded-lg h-full bg-zinc-900 flex flex-col'
 	>
-		<button onclick={() => console.log('holaaa')}>
-			<video
-				id=' miVideo'
-				class='w-full
-				object-fill rounded-lg'
-				autoplay
-				loop
-				muted
-				><source src='/videos/cajas-en-movimiento.mp4' /></video
-			>
-		</button>
-	</div>
-	<script>
-		function david() {
-			const video = document.getElementById('miVideo') as HTMLVideoElement
-			video.autoplay = false
-			console.log('dav')
-		}
-	</script>
-	<style>
-		:global(.light) .divBody {
-			background-color: #f0f0f0;
-		}
-	</style>
-</Layout>
+		<!-- <Video
+			autoplay={true}
+			id='cajas'
+			src='/videos/cajas-en-movimiento.mp4'
+		/>
+	</div> -->
+		<video
+			autoplay
+			id='cajas'
+			class='rounded-lg h-full'
+			muted
+			loop
+		>
+			<source
+				src='/videos/cajas-en-movimiento.mp4'
+				type='video/mp4'
+			/>
+		</video>
+		<script>
+			function handleClick() {
+				david.removeAttribute('autoplay')
+				david.pause()
+				console.log(david)
+			}
+			document.getElementById('cajas').addEventListener('click', handleClick)
+			const david = document.getElementById('cajas')
+		</script>
 
-<!-- controls='true' -->
+		<style>
+			:global(.light) .divBody {
+				background-color: #f0f0f0;
+			}
+		</style>
+	</div>
+
+	<!-- controls='true' -->
+</Layout>
