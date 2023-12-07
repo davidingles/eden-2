@@ -22,7 +22,7 @@ const { menu } = Astro.props
 {
 	menu &&
 		menu.map((item: MenuItem) => (
-			<div class='bordeRojo rounded-lg h-[66px] flex justify-center items-center my-2'>
+			<div class='card  rounded-lg h-[66px] flex justify-center items-center my-2'>
 				<a
 					href={item.link}
 					class='flex flex-row flex-1 justify-center items-center'
@@ -33,22 +33,22 @@ const { menu } = Astro.props
 
 					<div class='w-10 mr-4'>
 						{item.icon === 'us' && (
-							<div class='hover:rotate-6  hover:scale-110'>
+							<div class='hover:rotate-[6deg]  hover:scale-105 hover:-translate-y-[2px]'>
 								<IconNosotros />
 							</div>
 						)}
 						{item.icon === 'home' && (
-							<div class='hover:rotate-6  hover:scale-110'>
+							<div class='hover:rotate-[6deg]  hover:scale-105 hover:-translate-y-[2px]'>
 								<IconHome />
 							</div>
 						)}
 						{item.icon === 'services' && (
-							<div class='hover:rotate-6  hover:scale-110'>
+							<div class='hover:rotate-[6deg]  hover:scale-105 hover:-translate-y-[2px]'>
 								<IconServices />
 							</div>
 						)}
 						{item.icon === 'contact' && (
-							<div class='hover:rotate-6  hover:scale-110'>
+							<div class='hover:rotate-[6deg]  hover:scale-105 hover:-translate-y-[2px]'>
 								<IconContact />
 							</div>
 						)}
@@ -62,3 +62,12 @@ const { menu } = Astro.props
 			</div>
 		))
 }
+
+<style>
+	:global(.light) .card {
+		background-color: rgb(236, 234, 229);
+	}
+	.card {
+		background-color: rgb(24 24 24);
+	}
+</style>

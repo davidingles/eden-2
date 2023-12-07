@@ -73,8 +73,20 @@ const { title } = Astro.props
 		<style is:global>
 			:root {
 				--accent: 136, 58, 234;
-				--auxi1: rgb(223 172 18);
-				--auxi2: rgb(0 129 74);
+				--auxi1: rgb(222, 171, 18);
+				--auxi2: rgb(0, 128, 72);
+				--degraUno: linear-gradient(
+					45deg,
+					rgb(222, 171, 18, 0.2),
+					rgb(22, 24, 24),
+					rgb(0, 128, 72, 0.1)
+				);
+				--degraDos: linear-gradient(
+					45deg,
+					rgb(222, 171, 18, 0.1),
+					rgb(255, 255, 255),
+					rgb(222, 171, 18, 0.1)
+				);
 			}
 			html {
 				font-family: 'CircularStd', system-ui, sans-serif;
@@ -120,6 +132,7 @@ const { title } = Astro.props
 			.colorDos {
 				color: var(--auxi2);
 			}
+
 			@font-face {
 				font-family: 'ErasITC';
 				src: url('/fonts/ITC Eras Demi.ttf'); /* format('ttf'); */

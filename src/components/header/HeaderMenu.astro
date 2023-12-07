@@ -1,8 +1,15 @@
 ---
 import ToggleTheme from '@/components/ToggleTheme.astro'
 import TextoAnimadoTelefono from '@/components/botones-sliders/TextoAnimadoTelefono.astro'
+import { Counter } from '@/components/Counter.jsx'
 ---
 
+<div class=''>
+	<Counter
+		transition:persist
+		client:visible
+	/>
+</div>
 <div class='divToggleTheme flex flex-row rounded-lg'>
 	<!--  -->
 	<!--  -->
