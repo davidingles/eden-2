@@ -1,1 +1,11 @@
-<div class='bordeRojo m-2 w-full p-2 rounded-lg'>desde el bodyAsideMenu</div>
+---
+import { Counter } from '@/components/Counter.jsx'
+---
+
+<div class='bordeRojo m-2 w-full p-2 rounded-lg'>
+	desde el bodyAsideMenu
+	<Counter
+		transition:persist
+		client:visible
+	/>
+</div>
