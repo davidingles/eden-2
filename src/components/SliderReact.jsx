@@ -1,6 +1,7 @@
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 function SliderReact() {
+
   const images = [
     {
       original: 'img/cielo.jpg',
@@ -28,7 +29,7 @@ function SliderReact() {
     },
   ]
   return (
-    <div style={{ width: '88%', margin: 'auto' }}>
+    <div style={{ margin: 'auto' }}>
       <ImageGallery items={images}
         showPlayButton={true}
         showFullscreenButton={true}
@@ -39,9 +40,14 @@ function SliderReact() {
         slideDuration={1000}
         slideInterval={3000}
         thumbnailPosition={'bottom'}
+        sizes={'100%'}
+        useTranslate3D
       />
     </div>
   )
 
+
 }
+
+
 export default SliderReact;
