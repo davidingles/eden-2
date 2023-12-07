@@ -4,7 +4,14 @@ import ListOfBooks from '@/components/book/ListOfBooks.astro'
 ---
 
 <Layout title='Catálogo de la Auxiliar'>
-	<div>
+	<div class='bodyIndex bordeRojo m-2 p-2 rounded-lg'>
 		<ListOfBooks />
 	</div>
 </Layout>
+
+<style>
+	:global(.light) .bodyIndex {
+		background-color: #f5f5f5;
+		color: black;
+	}
+</style>
