@@ -64,10 +64,37 @@ const { menu } = Astro.props
 }
 
 <style>
-	:global(.light) .card {
-		background-color: rgb(236, 234, 229);
-	}
 	.card {
-		background-color: rgb(24 24 24);
+		width: auto;
+		height: 66px;
+		background: #313131;
+		box-shadow:
+			15px 15px 30px #000000,
+			-15px -15px 30px #000000;
+	}
+	.card:hover {
+		transition: all 0.3s ease-in-out;
+		transform: translateY(-3px);
+		filter: brightness(1.05);
+		box-shadow:
+			3px 3px 5px #000000,
+			-3px -15px 5px #000000;
+	}
+
+	:global(.light) .card {
+		border: solid 1px #ffffff;
+
+		background: #e0e0e0;
+		box-shadow:
+			15px 15px 30px #bebebe,
+			-15px -15px 30px #ffffff;
+	}
+	:global(.light) .card:hover {
+		transition: all 0.3s ease-in-out;
+		transform: translateY(-3px);
+		filter: brightness(1.05);
+		box-shadow:
+			3px 3px 5px #bebebe,
+			-3px -3px 5px #ffffff;
 	}
 </style>

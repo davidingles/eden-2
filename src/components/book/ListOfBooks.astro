@@ -3,13 +3,11 @@ import BookItem from './BookItem.astro'
 import { books } from '../../data/books.js'
 ---
 
-<ul
-	class='grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-52 place-items-center m-auto'
->
+<ul class='grid sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center m-auto'>
 	{
 		books.map((book) => {
 			return (
-				<ul class='card aspect-square'>
+				<ul class='card aspect-square rounded-lg'>
 					<BookItem
 						id={book.id}
 						title={book.title}
@@ -26,7 +24,6 @@ import { books } from '../../data/books.js'
 	.card {
 		width: auto;
 		height: auto;
-		border-radius: 30px;
 		background: #313131;
 		box-shadow:
 			15px 15px 30px #000000,

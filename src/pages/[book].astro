@@ -1,13 +1,13 @@
 ---
-import { books } from "../data/books.js";
-import Layout from "../layouts/Layout.astro";
-import ObtenerComponenteJsx from "../components/book/ObtenerComponenteJsx.astro";
-import BtnEstrellas from "../components/botones-sliders/BtnEstrellas.astro";
+import { books } from '../data/books.js'
+import Layout from '../layouts/Layout.astro'
+import ObtenerComponenteJsx from '../components/book/ObtenerComponenteJsx.astro'
+import BtnEstrellas from '../components/botones-sliders/BtnEstrellas.astro'
 
-const { book } = Astro.params;
-const bookData = books.find((b) => b.id === book);
+const { book } = Astro.params
+const bookData = books.find((b) => b.id === book)
 if (!bookData) {
-    return Astro.redirect("/404")
+	return Astro.redirect('/404')
 }
 
 // ESTA FUNCION DE GetStaticPaths() ES NECESARIA PARA HACER EL BUILD
@@ -22,84 +22,81 @@ if (!bookData) {
 //     ]
 // }
 
-
 //ESTA FUNCION NO SE SI FUNCIONA... SI NO, USA LA DE ARRIBA QUE ESTA COMENTADA
 export function getStaticPaths() {
-        return books.map((book) => (
-            {
-                params: {
-                    book: book.id,
-                }
-            }
-        ));
+	return books.map((book) => ({
+		params: {
+			book: book.id,
+		},
+	}))
 }
-
 ---
 
 <Layout title={bookData.id}>
+	<main
+		class='three-fondo bg-[#202020] flex flex-col h-screen justify-center items-center relative'
+	>
+		<a
+			id='anchor'
+			href='/catalogo'
+			class='flex flex-row mb-4 absolute top-8 left-8'
+		>
+			<BtnEstrellas />
+		</a>
 
-    <main class="three-fondo bg-[#202020] flex flex-col h-screen justify-center items-center relative">
-        <a id="anchor" href="/catalogo" class="flex flex-row mb-4 absolute top-8 left-8">
-            <BtnEstrellas>
-                <div class="">
-                    <svg
-                        width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M20 5a2 2 0 0 1 1.995 1.85l.005 .15v10a2 2 0 0 1 -1.85 1.995l-.15 .005h-11a1 1 0 0 1 -.608 -.206l-.1 -.087l-5.037 -5.04c-.809 -.904 -.847 -2.25 -.083 -3.23l.12 -.144l5 -5a1 1 0 0 1 .577 -.284l.131 -.009h11zm-7.489 4.14a1 1 0 0 0 -1.301 1.473l.083 .094l1.292 1.293l-1.292 1.293l-.083 .094a1 1 0 0 0 1.403 1.403l.094 -.083l1.293 -1.292l1.293 1.292l.094 .083a1 1 0 0 0 1.403 -1.403l-.083 -.094l-1.292 -1.293l1.292 -1.293l.083 -.094a1 1 0 0 0 -1.403 -1.403l-.094 .083l-1.293 1.292l-1.293 -1.292l-.094 -.083l-.102 -.07z" stroke-width="0" fill="black"></path>
-                    </svg>
-                </div>
-            </BtnEstrellas>
-        </a>
+		<div class='mb-24 text-2xl w-1/3'>
+			<h1 class='mb-4'>{bookData.title}</h1>
+			<p class='text-lg'>{bookData.opinion}</p>
+		</div>
 
-        <div class="mb-24 text-2xl w-1/3">
-            <h1 class="mb-4">{bookData.title}</h1>
-            <p class="text-lg">{bookData.opinion}</p>
-        </div>
+		<div class='flex flex-col w-2/3 md:flex-row justify-center content-between'>
+			<div class='mr-8 aspect-square rounded-2xl'>
+				<img
+					class='w-full h-full object-cover'
+					src={bookData.img}
+					alt=''
+				/>
+			</div>
 
-        <div class="flex flex-col w-2/3 md:flex-row justify-center content-between">
-
-            <div class=" mr-8 aspect-square rounded-2xl">
-                <img class="w-full h-full object-cover" src={bookData.img} alt="">
-            </div>
-
-            <div class="aspect-square">
-                <div class="w-full h-full flex flex-col items-center">
-                    <span class="bg-white items-center text-black py-2 px-4 rounded-lg font-bold border-gray-400 border-[1px]">
-                        Haz click sobre el 3D y gíralo
-                    </span>
-                    <ObtenerComponenteJsx componente_jsx={bookData.three} />
-                </div>
-            </div>
-
-        </div>
-    </main>
-
+			<div class='aspect-square'>
+				<div class='w-full h-full flex flex-col items-center'>
+					<span
+						class='click items-center text-white py-2 px-4 rounded-lg font-bold'
+					>
+						Haz click sobre el 3D y gíralo
+					</span>
+					<ObtenerComponenteJsx componente_jsx={bookData.three} />
+				</div>
+			</div>
+		</div>
+	</main>
 </Layout>
 
 <style>
-    :global(.light) .three-fondo{
-        background-color: #fff;
-    }
+	:global(.light) .three-fondo {
+		background-color: #fff;
+	}
+	:global(.light) .click {
+		color: black;
+	}
 </style>
 
-<script >
+<script>
+	//COMPROBAMOS SI HAY YA UN TEMA GUARDADO EN LOCALSTORAGE, SI NO HAY, COMPROBAMOS SI EL SISTEMA OPERATIVO TIENE EL TEMA OSCURO ACTIVADO, SI NO, PONEMOS EL TEMA CLARO
+	const theme = (() => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme')
+		}
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			return 'dark'
+		}
+		return 'light'
+	})()
 
-    //COMPROBAMOS SI HAY YA UN TEMA GUARDADO EN LOCALSTORAGE, SI NO HAY, COMPROBAMOS SI EL SISTEMA OPERATIVO TIENE EL TEMA OSCURO ACTIVADO, SI NO, PONEMOS EL TEMA CLARO
-    const theme = ( () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')){
-            return localStorage.getItem('theme')
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark'
-        }
-        return 'light'
-    })()
-
-//SI EL TEMA ES OSCURO, QUITAMOS LA CLASE LIGHT DEL HTML, SI NO, LA AÑADIMOS
-    if (theme === 'dark') {
-        document.documentElement.classList.remove('light')
-    }else{
-        document.documentElement.classList.add('light')
-    }
-
+	//SI EL TEMA ES OSCURO, QUITAMOS LA CLASE LIGHT DEL HTML, SI NO, LA AÑADIMOS
+	if (theme === 'dark') {
+		document.documentElement.classList.remove('light')
+	} else {
+		document.documentElement.classList.add('light')
+	}
 </script>
