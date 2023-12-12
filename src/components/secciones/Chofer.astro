@@ -1,68 +1,48 @@
 ---
-export interface Props  {
-        id: string
-        src: string
-        texto: string
-        responsable: string
-    }
-
+export interface Props {
+	id: string
+	src: string
+	texto: string
+	responsable: string
+}
 
 const { id, src, texto, responsable } = Astro.props
 ---
 
-
 <section
-    id={id}
-    class='min-w-screen min-h-screen flex flex-col items-center justify-center pt-20'
+	id={id}
+	class='min-h-screen flex flex-col items-center justify-center bordeRojo m-2 rounded-lg pb-[333px]'
 >
-    <div  class="camion w-2/3 h-[100px] text-gray-100 mb-4">
-        <div class="flex flex-row gap-12">
-            <p class="tipografia indent-7">
-                {texto}
-            </p>
-            <p class="tipo">
-                {responsable}
-            </p>
-        </div>
-    </div>
+	<div class='camion gap-12 w-2/3 text-gray-100 mb-4 flex justify-center mt-11'>
+		<p class='tipografia'>
+			{texto}
+		</p>
+		<p class='tipo'>
+			{responsable}
+		</p>
+	</div>
 
-    
-    <div class="h-full w-full">
-        <video
-            class='brightness-50 object-cover'
-            muted
-            autoplay
-            loop
-            src={src}
-        / >
-    </div>
-    
+	<video
+		class='brightness-50 object-cover rounded-lg flex flex-1'
+		muted
+		autoplay
+		loop
+		src={src}
+	>
+	</video>
 </section>
 
-
 <style>
-	:global(.light) .camion{
+	:global(.light) .camion {
 		color: #202020;
 	}
 	.tipo {
-		color: var(--auxiliar1);
+		color: var(--auxi1);
 	}
 	:global(.light) .tipo {
-		color: var(--auxiliar2);
+		color: var(--auxi2);
 	}
-</style>
-
-<!-- // TEMA OSCURO ==================================================================================================  -->
-<style>
-	:global(.light) .david{
-		color: black;
+	.tipografia {
+		font-family: Helvetica, Arial, sans-serif;
 	}
-</style>
-
-<!-- //TIPOGRAFIA ================================================================================================== -->
-<style>
-	.tipografia{
-	font-family: Helvetica, Arial, sans-serif;
-	}
-
 </style>
