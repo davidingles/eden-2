@@ -3,77 +3,77 @@ import TarjetasMario from '../cards/TarjetasMario.astro'
 ---
 
 <!-- // SECCION CONTACTOS ====================================================  -->
-<div class='grid grid-cols-1'>
-	<main
-		id='contactooo'
-		class='flex flex-col'
+<div
+	id='contactooo'
+	class='flex flex-col justify-center items-center bordeRojo h-full'
+>
+	<div class='justify-center p-8'>
+		<span class='contacta prueba text-lg text-[var(--auxiliar1)]'>
+			Contacta con el departamente que necesites o encuentranos en el mapa:
+		</span>
+	</div>
+	<!--  -->
+	<!--  -->
+	<!-- TARJETAS MARIO ===================================================== -->
+	<div
+		class='text-[var(--auxi2)] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:w-[80%] md:w-[40%]'
 	>
-		<div class='flex flex-col p-8 mt-16'>
-			<span class='contacta text-3xl text-[var(--auxiliar1)]'>968 693 675</span>
-			<span class='contacta prueba text-lg text-[var(--auxiliar1)]'>
-				Contacta con el departamente que necesites
-			</span>
-		</div>
-		<div
-			class='text-[var(--auxiliar2)] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-[80%] sm:w-auto m-auto'
+		<!-- <TextoAnimadoTelefono /> -->
+		<a
+			id='scroll-to-camion'
+			href='/servicios/#admi'
 		>
-			<!-- <TextoAnimadoTelefono /> -->
-			<a
-				id='scroll-to-camion'
-				href='/servicios/#admi'
-			>
-				<TarjetasMario
-					telefono='686 944 932'
-					jefes='administracion'
-					departamento='Admin'
-				/>
-			</a>
-			<a
-				id='scroll-to-camion2'
-				href='/servicios/#cajas'
-			>
-				<TarjetasMario
-					telefono='657 803 024'
-					jefes='ventas'
-					departamento='Ventas'
-				/>
-			</a>
-			<a
-				id='scroll-to-camion3'
-				href='/servicios/#camion'
-			>
-				<TarjetasMario
-					telefono='657 803 024'
-					jefes='logistica'
-					departamento='Logística'
-				/>
-			</a>
-			<a
-				id='scroll-to-camion4'
-				href='/servicios#diseñando'
-			>
-				<TarjetasMario
-					telefono='657 803 024'
-					jefes='diseño'
-					departamento='Diseño'
-				/>
-			</a>
-			<a
-				id='scroll-to-camion5'
-				href='https://goo.gl/maps/aF9KwAe88DQVdV427'
-				target='_blank'
-			>
-				<TarjetasMario
-					telefono='968 693 575'
-					jefes='maps'
-				/>
-			</a>
-		</div>
-	</main>
+			<TarjetasMario
+				telefono='686 944 932'
+				jefes='administracion'
+				departamento='Administración'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion2'
+			href='/servicios/#cajas'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='ventas'
+				departamento='Ventas'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion3'
+			href='/servicios/#camion'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='logistica'
+				departamento='Logística'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion4'
+			href='/servicios#diseñando'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='diseño'
+				departamento='Diseño'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion5'
+			href='https://goo.gl/maps/aF9KwAe88DQVdV427'
+			target='_blank'
+		>
+			<TarjetasMario
+				telefono='968 693 575'
+				jefes='maps'
+			/>
+		</a>
+	</div>
 </div>
 
 <style>
 	:global(.light) .contacta {
-		color: var(--auxiliar2);
+		color: var(--auxi2);
 	}
 </style>
