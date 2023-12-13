@@ -1,0 +1,11 @@
+svg {
+	width: 22px;
+}
+
+path {
+	fill: #d9d9d9;
+}
+
+:global(.light) path {
+	fill: #202020;
+}

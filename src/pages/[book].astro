@@ -5,6 +5,7 @@ import ObtenerComponenteJsx from '../components/book/ObtenerComponenteJsx.astro'
 import BtnEstrellas from '../components/botones-sliders/BtnEstrellas.astro'
 
 const { book } = Astro.params
+console.log(book)
 const bookData = books.find((b) => b.id === book)
 if (!bookData) {
 	return Astro.redirect('/404')

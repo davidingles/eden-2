@@ -5,15 +5,16 @@ import IconServices from '@/components/icons/IconServices.astro'
 import IconContact from '@/components/icons/IconContact.astro'
 import IconCatalogo from '@/components/icons/IconCatalogo.astro'
 import BtnAdelante from '@/components/botones-sliders/BtnAdelante.astro'
+import BtnAdelanteRojo from '../botones-sliders/BtnAdelanteRojo.astro'
 
-interface MenuItem {
+interface cardaside {
 	link: string
 	icon: string
 	title: string
 }
 
 interface Props {
-	menu?: MenuItem[]
+	menu?: cardaside[]
 }
 
 const { menu } = Astro.props
@@ -21,7 +22,7 @@ const { menu } = Astro.props
 
 {
 	menu &&
-		menu.map((item: MenuItem) => (
+		menu.map((item) => (
 			<div class='card  rounded-lg h-[66px] flex justify-center items-center my-2'>
 				<a
 					href={item.link}
@@ -98,3 +99,9 @@ const { menu } = Astro.props
 			-3px -3px 5px #ffffff;
 	}
 </style>
+
+<!-- {globalThis.location.pathname === item.link ? (
+	<BtnAdelanteRojo menus={item.title} />
+) : (
+	<BtnAdelante menus={item.title} />
+)} -->

@@ -7,40 +7,16 @@ import Video from '@/components/Video.astro'
 	<div
 		class='divBody colorDos bordeRojo rounded-lg h-full bg-zinc-900 flex flex-col'
 	>
-		<!-- <Video
+		<Video
 			autoplay={true}
 			id='cajas'
 			src='/videos/cajas-en-movimiento.mp4'
 		/>
-	</div> -->
-		<video
-			autoplay
-			id='cajas'
-			class='rounded-lg h-full'
-			muted
-			loop
-		>
-			<source
-				src='/videos/cajas-en-movimiento.mp4'
-				type='video/mp4'
-			/>
-		</video>
-		<script>
-			function handleClick() {
-				david.removeAttribute('autoplay')
-				david.pause()
-				console.log(david)
-			}
-			document.getElementById('cajas').addEventListener('click', handleClick)
-			const david = document.getElementById('cajas')
-		</script>
-
-		<style>
-			:global(.light) .divBody {
-				background-color: #f0f0f0;
-			}
-		</style>
 	</div>
 
-	<!-- controls='true' -->
+	<style>
+		:global(.light) .divBody {
+			background-color: #f0f0f0;
+		}
+	</style>
 </Layout>
