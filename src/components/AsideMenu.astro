@@ -1,5 +1,5 @@
 ---
-import MenuReact from '@/components/MenuReact.jsx'
+import MenuReact from '@/components/menuReact.jsx'
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
 
 import BodyAsideMenu from '@/components/BodyAsideMenu.astro'
@@ -37,13 +37,14 @@ const menu = [
 	<!--  -->
 	<!--  -->
 	<!-- //!!LOGO DEL ASIDE============ -->
-	<div class='p-4 logo-animation'>
+	<div class='p-4 logo-animation w-full flex justify-center flex-1'>
 		<Logo />
 	</div>
 	<!-- //!!LOGO===================== -->
 	<!--  -->
 	<!--  -->
 	<div class='bordeVerde m-2 p-2 flex flex-1 rounded-lg flex-col'>
+		<!-- !!BOTONES DE MENU================ -->
 		<div class='p-2'>
 			<MenuReact
 				client:load
@@ -51,6 +52,9 @@ const menu = [
 				transition:persist
 			/>
 		</div>
+		<!-- !!BOTONES DE MENU================ -->
+		<!--  -->
+		<!--  -->
 		<div class='flex flex-1'>
 			<BodyAsideMenu />
 		</div>
