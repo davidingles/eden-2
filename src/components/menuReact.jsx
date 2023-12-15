@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import estilos from './MenuReact.module.css';
+import estilosMenu from './MenuReact.module.css';
 import { IconHome, IconContact } from './icons/IconHome';
 
 const menu = [
@@ -39,33 +39,29 @@ const MenuReact = () => {
   }, [])
 
   return (
-    <div>
-      <nav>
-        <ul>
-          {menu && menu.map((item, index) => (
-            <li key={index} style={estilos} className='flex flex-row flex-1 justify-center items-center'>
-              <a
-                href={item.link}
-                style={{ ...estilos, color: currentPage === item.link ? 'red' : '' }}
-              >
+    <ul>
+      <li className='flex flex-col flex-1 justify-center items-start'>
+        {menu && menu.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            style={{ ...estilosMenu, color: currentPage === item.link ? 'red' : '' }}
+          >
 
-                {item.title}
+            {item.title}
 
-              </a>
-              {item.icon === 'us' && <IconHome />}
-              {item.icon === 'home' && <IconHome />}
-              {item.icon === 'services' && <IconHome />}
-              {item.icon === 'contact' && <IconContact />}
-              {item.icon === 'catalogo' && <IconHome />}
+            {item.icon === 'us' && <IconHome />}
+            {item.icon === 'home' && <IconHome />}
+            {item.icon === 'services' && <IconHome />}
+            {item.icon === 'contact' && <IconContact />}
+            {item.icon === 'catalogo' && <IconHome />}
 
-            </li>
-          ))}
+          </a>
+        ))}
 
-        </ul>
+      </li>
+    </ul>
 
-      </nav>
-
-    </div >
   );
 };
 
