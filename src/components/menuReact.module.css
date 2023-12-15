@@ -1,40 +1,45 @@
-a {
-  display: inline-block;
+.mena {
+  /* display: inline-block; */
+  display: flex;
+  border: solid 1px #ffffff;
+  flex: space-between;
+  flex-direction: row;
+  flex: nowrap;
+  flex: 1 1 0%;
   color: #ffffff;
   text-align: center;
-  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   padding: 5px;
   margin: 5px;
   cursor: pointer;
-  display: inline-block;
   position: relative;
   transition: 0.5s;
-  width: auto;
+  width: max-content;
   height: 66px;
-  background: #313131;
+  background: #252525;
   box-shadow:
     15px 15px 30px #000000,
     -15px -15px 30px #000000;
 }
 
-a:after {
+
+.mena:after {
   content: '>>';
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -30px;
+  right: -40px;
   transition: 0.5s;
 }
 
-a:hover:after {
+.mena:hover:after {
   right: 0;
   opacity: 1;
 }
 
 
-a:hover {
+.mena:hover {
   transition: all 0.3s ease-in-out;
   transform: translateY(-3px);
   filter: brightness(1.05);
@@ -45,7 +50,7 @@ a:hover {
 
 }
 
-:global(.light) a {
+:global(.light) .mena {
   border: solid 1px #ffffff;
 
   background: #e0e0e0;
@@ -56,7 +61,7 @@ a:hover {
 
 }
 
-:global(.light) a:hover {
+:global(.light) .mena:hover {
   transition: all 0.3s ease-in-out;
   transform: translateY(-3px);
   filter: brightness(1.05);

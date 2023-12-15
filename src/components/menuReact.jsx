@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import estilosMenu from './MenuReact.module.css';
+import estilos from './menuReact.module.css';
 import { IconHome, IconContact } from './icons/IconHome';
 
 const menu = [
@@ -45,7 +45,8 @@ const MenuReact = () => {
           <a
             key={index}
             href={item.link}
-            style={{ ...estilosMenu, color: currentPage === item.link ? 'red' : '' }}
+            className={estilos.mena}
+            style={{ ...estilos, color: currentPage === item.link ? 'red' : '' }}
           >
 
             {item.title}
