@@ -39,7 +39,7 @@ const MenuReact = () => {
   }, [])
 
   return (
-    <li className='flex flex-col flex-1 bordeRojo'>
+    <li className='flex flex-col bordeRojo'>
       {menu && menu.map((item, index) => (
         <a
           key={index}
