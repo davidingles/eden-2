@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import estilos from './menuReact.module.css';
-import { IconHome, IconContact } from './icons/IconHome';
+import { IconHome, IconContact, IconCatalogo, IconServices, IconNosotros } from './icons/IconHome';
 
 const menu = [
 
@@ -53,10 +53,10 @@ const MenuReact = () => {
             className={estilos.hover}
             style={{ display: 'flex', flex: '1', justifyContent: 'end', marginRight: '3rem' }}>
             {item.icon === 'us' && <IconHome />}
-            {item.icon === 'home' && <IconHome />}
-            {item.icon === 'services' && <IconHome />}
+            {item.icon === 'home' && <IconNosotros />}
+            {item.icon === 'services' && <IconServices />}
             {item.icon === 'contact' && <IconContact />}
-            {item.icon === 'catalogo' && <IconHome />}
+            {item.icon === 'catalogo' && <IconCatalogo />}
           </div>
 
         </a>

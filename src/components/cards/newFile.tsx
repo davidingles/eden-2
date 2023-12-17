@@ -1,4 +1,4 @@
-import IconHome from '@/components/icons/IconHome.astro';
+import IconHome from '@/components/icons/IconHome___.astro';
 import IconNosotros from '@/components/icons/IconNosotros.astro';
 import IconServices from '@/components/icons/IconServices.astro';
 import IconContact from '@/components/icons/IconContact.astro';
