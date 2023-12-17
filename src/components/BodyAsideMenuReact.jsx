@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Counter } from '@/components/Counter.jsx';
-
+import { BodyAsideReact } from '@/components/BodyAsideReact.jsx';
 const menu = [
 
 	{
@@ -51,7 +51,7 @@ export default function BodyAsideMenuReact() {
 						<div
 							key={index}
 						>
-							{currentPage === item.link && <div>{item.title}</div>}
+							{currentPage === item.link && <div>{item.title} <BodyAsideReact /></div>}
 
 						</div>
 					))

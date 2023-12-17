@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import BodyIndex from '@/components/BodyIndex.astro'
-import HeaderMenu from '@/components/header/HeaderMenu.astro'
+import { SliderReact } from '@/components/SliderReact.jsx'
 ---
 
 <Layout title='Sobre nosotros'>
@@ -11,7 +10,9 @@ import HeaderMenu from '@/components/header/HeaderMenu.astro'
 	<div
 		class='bodyIndex bordeRojo m-2 p-2 rounded-lg flex justify-center items-center flex-col flex-1'
 	>
-		<BodyIndex />
+		<div class='m-2 w-full'>
+			<!-- <SliderReact client:load /> -->
+		</div>
 	</div>
 	<!-- //!: body=================================== -->
 	<!--  -->
