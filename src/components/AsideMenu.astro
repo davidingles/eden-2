@@ -1,5 +1,6 @@
 ---
 import MenuReact from '@/components/menuReact.jsx'
+import BodyAsideMenuReact from '@/components/BodyAsideMenuReact.jsx'
 import Logo from '@/components/icons/LogoAuxCompleto.astro'
 
 import BodyAsideMenu from '@/components/BodyAsideMenu.astro'
@@ -56,7 +57,11 @@ const menu = [
 		<!--  -->
 		<!--  -->
 		<div class='flex flex-1'>
-			<BodyAsideMenu />
+			<BodyAsideMenuReact
+				client:load
+				transition:name='dav'
+				transition:persist
+			/>
 		</div>
 	</div>
 </div>

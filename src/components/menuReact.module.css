@@ -44,7 +44,7 @@
 }
 
 
-.mena-mena:hover {
+/* .mena-mena:hover {
   transition: all 0.3s ease-in-out;
   transform: translateY(-3px);
   filter: brightness(1.05);
@@ -53,7 +53,7 @@
     -3px -15px 5px #000000;
   padding-right: 25px;
 
-}
+} */
 
 :global(.light) .mena {
   border: solid 1px #ffffff;

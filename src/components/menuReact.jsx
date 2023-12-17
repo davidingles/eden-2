@@ -50,7 +50,6 @@ const MenuReact = () => {
 
           <div className={estilos.menadiv} style={{ marginLeft: '3rem', display: 'flex' }} >{item.title}</div>
           <div
-            className={estilos.hover}
             style={{ display: 'flex', flex: '1', justifyContent: 'end', marginRight: '3rem' }}>
             {item.icon === 'us' && <IconHome />}
             {item.icon === 'home' && <IconNosotros />}
