@@ -39,29 +39,31 @@ const MenuReact = () => {
   }, [])
 
   return (
-    <ul>
-      <li className='flex flex-col flex-1 justify-center items-start'>
-        {menu && menu.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            className={estilos.mena}
-            style={{ ...estilos, color: currentPage === item.link ? 'red' : '' }}
-          >
+    <li className='flex flex-col flex-1 bordeRojo'>
+      {menu && menu.map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          className={estilos.mena}
+          style={{ ...estilos, color: currentPage === item.link ? 'red' : '' }}
+        >
 
-            {item.title}
-
+          <div className={estilos.menadiv} style={{ marginLeft: '3rem', display: 'flex' }} >{item.title}</div>
+          <div
+            className={estilos.hover}
+            style={{ display: 'flex', flex: '1', justifyContent: 'end', marginRight: '3rem' }}>
             {item.icon === 'us' && <IconHome />}
             {item.icon === 'home' && <IconHome />}
             {item.icon === 'services' && <IconHome />}
             {item.icon === 'contact' && <IconContact />}
             {item.icon === 'catalogo' && <IconHome />}
+          </div>
 
-          </a>
-        ))}
+        </a>
+      ))
+      }
 
-      </li>
-    </ul>
+    </li >
 
   );
 };
