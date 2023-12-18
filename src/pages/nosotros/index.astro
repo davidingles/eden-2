@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { SliderReact } from '@/components/SliderReact.jsx'
+// import { SliderReact } from '@/components/SliderReact.jsx'
+import { NosotrosCarruselReact } from '@/components/NosotrosCarruselReact.jsx'
 ---
 
 <Layout title='Sobre nosotros'>
@@ -8,10 +9,13 @@ import { SliderReact } from '@/components/SliderReact.jsx'
 	<!--  -->
 	<!-- //!: body=================================== -->
 	<div
-		class='bodyIndex bordeRojo m-2 p-2 rounded-lg flex justify-center items-center flex-col flex-1'
+		class='bodyIndex bordeRojo p-2 rounded-lg flex justify-center items-center flex-col h-full'
 	>
-		<div class='m-2 w-full'>
-			<!-- <SliderReact client:load /> -->
+		<!-- <div class='m-2 w-full'>
+			<SliderReact client:load />
+		</div> -->
+		<div>
+			<NosotrosCarruselReact client:load />
 		</div>
 	</div>
 	<!-- //!: body=================================== -->

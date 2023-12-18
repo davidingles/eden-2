@@ -16,7 +16,10 @@
       ],
       "@/svg/*": [
         "public/svg/*"
-      ]
+      ],
+      "@/img/*": [
+        "public/img/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "solid-js"

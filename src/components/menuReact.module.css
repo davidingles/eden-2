@@ -43,18 +43,6 @@
   opacity: 1;
 }
 
-
-/* .mena-mena:hover {
-  transition: all 0.3s ease-in-out;
-  transform: translateY(-3px);
-  filter: brightness(1.05);
-  box-shadow:
-    3px 3px 5px #000000,
-    -3px -15px 5px #000000;
-  padding-right: 25px;
-
-} */
-
 :global(.light) .mena {
   border: solid 1px #ffffff;
   background: #e0e0e0;
@@ -72,11 +60,4 @@
   box-shadow:
     3px 3px 5px #bebebe,
     -3px -3px 5px #ffffff;
-}
-
-.icon:hover {
-  scale: 1.2;
-  transition: 0.5s;
-  translate: 3px;
-
 }
