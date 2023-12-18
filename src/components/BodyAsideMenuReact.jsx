@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Counter } from '@/components/Counter.jsx';
 import { BodyAsideReact } from '@/components/BodyAsideReact.jsx';
 const menu = [
-
 	{
 		title: 'Inicio',
 		icon: 'home',
@@ -30,8 +29,6 @@ const menu = [
 	},
 ]
 
-
-
 export default function BodyAsideMenuReact() {
 	const [currentPage, setCurrentPage] = useState('/');
 	useEffect(() => {
@@ -41,22 +38,23 @@ export default function BodyAsideMenuReact() {
 		<div className="body-aside-menu">
 			<h2>BodyAsideMenuReact</h2>
 			<Counter
-
 				transition:name="dav"
 				transition:persist
 			/>
 			<div>
-				{
-					menu && menu.map((item, index) => (
-						<div
-							key={index}
-						>
-							{currentPage === item.link && <div>{item.title} <BodyAsideReact /></div>}
-
-						</div>
-					))
-				}
+				{menu && menu.map((item, index) => (
+					<div key={index}>
+						{currentPage === item.link && <div>{item.title} <BodyAsideReact /></div>}
+					</div>
+				))}
+				{currentPage === '/' && (
+					<p className='parrafo font-bold text-xl p-4 text-[var(--auxi2)]'>Empresa dedicada a la fabricación de envases y embalajes de cartón
+						ondulado y otros productos relacionados con el embalaje. Cajas, bandejas,
+						estuches, expositores, separadores, plancha paletizaje, etc.
+					</p>
+				)}
 			</div>
 		</div>
 	);
 }
+
