@@ -1,0 +1,12 @@
+.btn {
+  /* border: 3px solid #666; */
+  color: #666;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 11px 2px rgb(0 0 0 / 20%);
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 2px 2px rgb(0 0 0 / 10%);
+}

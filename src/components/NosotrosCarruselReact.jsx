@@ -1,4 +1,4 @@
-
+import estilos from './NosotrosCarruselReact.module.css'
 import { useState } from 'react'
 const cielo = '/img/cielo.jpg'
 const nave = '/img/nave.jpg'
@@ -31,11 +31,12 @@ export function NosotrosCarruselReact() {
           <img src={imagenSeleccionada} alt="nave de la auxiliar" />
         </div>
         <div className='flex flex-row p-2 m-auto gap-2'>
-          <button className='btn bg-slate-800 text-white p-2 rounded-lg' onClick={previous}>{'<'}</button>
-          <button className='btn bg-slate-800 text-white p-2 rounded-lg' onClick={next}>{'>'}</button>
+          <button className={`${estilos.btn} btn`} onClick={previous}>{'<'}</button>
+          <button className={`${estilos.btn} btn`} onClick={next}>{'>'}</button>
         </div>
       </div>
 
     </>
   )
 }
+
