@@ -54,6 +54,8 @@ export default function BodyAsideMenuReact() {
 					</p>
 				)}
 			</div>
+			<video src="/videos/montajes/video1G0011.webm" autoPlay loop muted className="video
+			"></video>
 		</div>
 	);
 }
