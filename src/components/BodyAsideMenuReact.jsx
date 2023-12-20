@@ -41,7 +41,7 @@ export default function BodyAsideMenuReact() {
 				transition:name="dav"
 				transition:persist
 			/>
-			<div>
+			{/* <div>
 				{menu && menu.map((item, index) => (
 					<div key={index}>
 						{currentPage === item.link && <div>{item.title} <BodyAsideReact /></div>}
@@ -53,8 +53,8 @@ export default function BodyAsideMenuReact() {
 						estuches, expositores, separadores, plancha paletizaje, etc.
 					</p>
 				)}
-			</div>
-			<video src="/videos/montajes/video1G0011.webm" autoPlay loop muted className="video
+			</div> */}
+			<video src="/videos/montajes/video1G001.mp4" autoPlay loop muted className="video
 			"></video>
 		</div>
 	);
