@@ -33,6 +33,7 @@ const menu = [
 
 const MenuReact = () => {
   const [currentPage, setCurrentPage] = useState('/');
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setCurrentPage(window.location.pathname)
@@ -41,11 +42,11 @@ const MenuReact = () => {
   return (
     <li className='flex flex-col bordeRojo'>
       {menu && menu.map((item, index) => (
-        <a
+        // (currentPage === item.link && setLoaded(true))
+        < a
           key={index}
           href={item.link}
-          className={estilos.mena}
-          style={{ ...estilos, color: currentPage === item.link ? 'red' : '' }}
+          className={`${estilos.mena} ${currentPage === item.link ? estilos.nombre : ''}`}
         >
 
           <div className={estilos.menadiv} style={{ marginLeft: '3rem', display: 'flex' }} >{item.title}</div>
@@ -69,3 +70,5 @@ const MenuReact = () => {
 
 export default MenuReact;
 
+
+{/* <img onLoad={() => setLoaded(true)} className={`${estilos.foto} ${loaded ? estilos.loaded : ""}`} src={imagenSeleccionada} alt="nave de la auxiliar" /> */ }

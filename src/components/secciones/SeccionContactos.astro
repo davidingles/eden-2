@@ -2,18 +2,88 @@
 import TarjetasMario from '../cards/TarjetasMario.astro'
 ---
 
-<!-- // SECCION CONTACTOS ====================================================  -->
-<div id='contactooo'>
-	<div class='justify-center p-8'>
-		<span class='contacta prueba text-lg text-[var(--auxi1)]'>
+<!-- // SECCION CONTACTOS ====================================================  --><!-- <div
+	id='contactooo'
+	class='bordeVerde w-full h-full m-2 flex flex-col flex-1 justify-center items-center'
+>
+	<div class='flex justify-center overflow-hidden'>
+		<span class='contacta text-lg text-[var(--auxi1)] m-12 p-12'>
 			Contacta con el departamente que necesites o encuentranos en el mapa:
 		</span>
 	</div>
-	<!--  -->
-	<!--  -->
-	<!-- TARJETAS MARIO ===================================================== -->
 	<div
-		class='text-[var(--auxi2)] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:w-[80%] md:w-[40%] m-auto'
+		class='mario pb-24 text-[var(--auxi2)] grid grid-cols-1 ,md:grid-cols-2 h-full lg:grid-cols-3 md:gap-4 lg:gap-6 2xl:gap-12 lg:w-[60%] md:w-[40%] m-auto bordeRojo flex-1'
+	>
+		<a
+			id='scroll-to-camion'
+			href='/servicios/#admi'
+		>
+			<TarjetasMario
+				telefono='686 944 932'
+				jefes='administracion'
+				departamento='Administración'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion2'
+			href='/servicios/#cajas'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='ventas'
+				departamento='Ventas'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion3'
+			href='/servicios/#camion'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='logistica'
+				departamento='Logística'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion4'
+			href='/servicios#diseñando'
+		>
+			<TarjetasMario
+				telefono='657 803 024'
+				jefes='diseño'
+				departamento='Diseño'
+			/>
+		</a>
+		<a
+			id='scroll-to-camion5'
+			href='https://goo.gl/maps/aF9KwAe88DQVdV427'
+			target='_blank'
+		>
+			<TarjetasMario
+				telefono='968 693 575'
+				jefes='maps'
+			/>
+		</a>
+	</div>
+</div>
+
+<style>
+	:global(.light) .contacta {
+		color: var(--auxi2);
+	}
+
+</style> -->
+<div
+	id='contactooo'
+	class='bordeVerde flex flex-col h-full gap-8 w-[30%] sm:w-[80%] md:w-[80%] lg:w-[70%] xl:w-[50%]'
+>
+	<div class=''>
+		<span class='contacta'>
+			Contacta con el departamente que necesites o encuentranos en el mapa:
+		</span>
+	</div>
+	<div
+		class='grid grid-cols-1 m-auto md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-10'
 	>
 		<!-- <TextoAnimadoTelefono /> -->
 		<a
