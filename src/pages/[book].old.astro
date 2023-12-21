@@ -1,0 +1,91 @@
+---
+import { books } from '../data/books.js'
+import LayoutCatalogo from '../layouts/LayoutCatalogo.astro.jsx'
+import ObtenerComponenteJsx from '../components/book/ObtenerComponenteJsx.astro.jsx'
+import BtnEstrellas from '../components/botones-sliders/BtnEstrellas.astro.jsx'
+import Troquel1g0011 from '@/components/three/Troquel1g0011'
+
+const { book } = Astro.params
+console.log(book)
+const bookData = books.find((b) => b.id === book)
+if (!bookData) {
+	return Astro.redirect('/404')
+}
+
+// ESTA FUNCION DE GetStaticPaths() ES NECESARIA PARA HACER EL BUILD
+// ========================================================================
+// export function getStaticPaths() {
+//     return [
+//         {params: {book: "B1Cerrada"}},
+//         {params: {book: "BandejaAacotada"}},
+//         {params: {book: "EstucheConAsas"}},
+//         {params: {book: "ExpositorDM"}},
+//         {params: {book: "troquel1g0011"}},
+//     ]
+// }
+
+//ESTA FUNCION NO SE SI FUNCIONA... SI NO, USA LA DE ARRIBA QUE ESTA COMENTADA
+export function getStaticPaths() {
+	return books.map((book) => ({
+		params: {
+			book: book.id,
+		},
+	}))
+}
+---
+
+<LayoutCatalogo title={bookData.id}>
+	<article class='flex flex-col flex-1'>
+		<div class='bordeVerde'>
+			<a
+				id='
+			anchor'
+				href='/catalogo'
+			>
+				<BtnEstrellas />
+			</a>
+			<div class='p-4'>
+				<p>{bookData.opinion}</p>
+			</div>
+		</div>
+		<main class='flex p-4 h-full bordeVerde'>
+			<div>
+				<div class='bordeRojo'>
+					<span>{bookData.title}</span>
+					<img
+						src={bookData.img}
+						alt=''
+					/>
+				</div>
+				<div class='flex flex-col flex-1 bordeRojo'>
+					<span> Haz click sobre el 3D y gíralo</span>
+					<div class='flex flex-1'>
+						<ObtenerComponenteJsx
+							componente_jsx={bookData.three}
+							client:visible
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<video
+					src='/videos/montajes/video1G001.mp4'
+					controls
+					autoplay
+					loop
+					muted
+				></video>
+			</div>
+		</main>
+
+		<style>
+			:global(.light) .three-fondo {
+				background-color: #fff;
+			}
+			:global(.light) .click {
+				color: black;
+			}
+		</style>
+	</article>
+</LayoutCatalogo>

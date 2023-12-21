@@ -3,6 +3,7 @@ import { books } from '../data/books.js'
 import LayoutCatalogo from '../layouts/LayoutCatalogo.astro'
 import ObtenerComponenteJsx from '../components/book/ObtenerComponenteJsx.astro'
 import BtnEstrellas from '../components/botones-sliders/BtnEstrellas.astro'
+import Troquel1g0011 from '@/components/three/Troquel1g0011'
 
 const { book } = Astro.params
 console.log(book)
@@ -34,43 +35,56 @@ export function getStaticPaths() {
 ---
 
 <LayoutCatalogo title={bookData.id}>
-	<main class='three-fondo bg-[#202020]'>
-		<a
-			id='anchor'
-			href='/catalogo'
-			class='[grid-area:aside]'
-		>
-			<BtnEstrellas />
-		</a>
-
-		<div class='[grid-area:main1]'>
-			<h1 class='bordeRojo'>{bookData.title}</h1>
-			<p class='bordeRojo'>{bookData.opinion}</p>
+	<article class='flex flex-col'>
+		<div class='bordeVerde flex flex-col'>
+			<a
+				id='
+			anchor'
+				href='/catalogo'
+			>
+				<BtnEstrellas />
+			</a>
+			<div class='p-4'>
+				<p>{bookData.opinion}</p>
+				<span>{bookData.title}</span>
+			</div>
 		</div>
 
-		<div
-			class='bordeRojo [grid-area:footer1] flex flex-row place-content-between'
-		>
-			<div class='rounded-2xl'>
-				<img
-					class='w-1/2 h-full object-cover'
-					src={bookData.img}
-					alt=''
-				/>
-			</div>
-
-			<div class='aspect-square bordeRojo'>
-				<div class='w-1/2 h-full flex flex-col items-center'>
-					<span
-						class='click items-center text-white py-2 px-4 rounded-lg font-bold'
+		<main class='flex'>
+			<div class='flex flex-col flex-1'>
+				<div
+					class='bordeRojo h-[350px] flex flex-col justify-center items-center [flex-shrink:1]'
+				>
+					<img
+						class='object-cover overflow-auto'
+						src={bookData.img}
+						alt=''
+					/>
+				</div>
+				<div class='bordeRojo h-[370px]'>
+					<div
+						class='flex flex-1 justify-center items-center bordeVerde h-[350px] overflow-auto'
 					>
-						Haz click sobre el 3D y gíralo
-					</span>
-					<ObtenerComponenteJsx componente_jsx={bookData.three} />
+						<ObtenerComponenteJsx
+							componente_jsx={bookData.three}
+							client:visible
+						/>
+					</div>
 				</div>
 			</div>
-		</div>
-	</main>
+
+			<div class='bordeRojo flex flex-1'>
+				<video
+					class='object-scale-down h-[700px]'
+					src='/videos/montajes/video1G001.mp4'
+					controls
+					autoplay
+					loop
+					muted
+				></video>
+			</div>
+		</main>
+	</article>
 </LayoutCatalogo>
 
 <style>
@@ -79,14 +93,5 @@ export function getStaticPaths() {
 	}
 	:global(.light) .click {
 		color: black;
-	}
-	.three-fondo {
-		display: grid;
-		grid-template-areas:
-			'aside aside'
-			'main1 main1'
-			'footer1 footer1';
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto 1fr;
 	}
 </style>

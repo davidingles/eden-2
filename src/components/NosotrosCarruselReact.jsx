@@ -3,44 +3,17 @@ import { useState, useEffect } from 'react'
 const cielo = '/img/cielo.jpg'
 const nave = '/img/nave.jpg'
 const lunes = '/img/lunes.jpg'
+const martes = '/img/martes.jpg'
+const miercoles = '/img/miercoles.jpg'
+const nav = '/img/nav.jpg'
 
-/**
- * Componente de carrusel de imágenes para la sección "Nosotros".
- */
 export function NosotrosCarruselReact() {
-  /**
-   * Arreglo de imágenes para el carrusel.
-   * @type {string[]}
-   */
-  const imagenes = [cielo, nave, lunes];
-
-  /**
-   * Índice de la imagen seleccionada actualmente.
-   * @type {number}
-   */
+  const imagenes = [cielo, nave, lunes, martes, miercoles, nav];
   const [indiceSeleccionado, setIndiceSeleccionado] = useState(0);
-
-  /**
-   * Imagen seleccionada actualmente.
-   * @type {string}
-   */
   const [imagenSeleccionada, setImagenSeleccionada] = useState(imagenes[0]);
-
-  /**
-   * Estado de carga de la imagen.
-   * @type {boolean}
-   */
   const [loaded, setLoaded] = useState(true);
-
-  /**
-   * Estado de reproducción automática del carrusel.
-   * @type {boolean}
-   */
   const [autoPlay, setAutoPlay] = useState(true);
 
-  /**
-   * Hook de efecto para la reproducción automática del carrusel.
-   */
   useEffect(() => {
     if (autoPlay) {
       const interval = setInterval(() => {
@@ -49,13 +22,6 @@ export function NosotrosCarruselReact() {
       return () => clearInterval(interval);
     }
   });
-
-  /**
-   * Cambia la imagen seleccionada en el carrusel.
-   * @param {number} index - Índice de la imagen actualmente seleccionada.
-   * @param {string[]} imagenes - Arreglo de imágenes del carrusel.
-   * @param {boolean} next - Indica si se debe seleccionar la siguiente imagen (true) o la anterior (false).
-   */
   const nuevaImagenSeleccionada = (index, imagenes, next = true) => {
     setLoaded(false); // reset loaded state when changing image
     const condicion = next ? indiceSeleccionado < imagenes.length - 1 : indiceSeleccionado > 0;
@@ -63,39 +29,40 @@ export function NosotrosCarruselReact() {
     setIndiceSeleccionado(nuevoIndice);
     setImagenSeleccionada(imagenes[nuevoIndice]);
   };
-
-  /**
-   * Muestra la imagen anterior en el carrusel.
-   */
   const previous = () => {
     nuevaImagenSeleccionada(indiceSeleccionado, imagenes, false);
   };
-
-  /**
-   * Muestra la siguiente imagen en el carrusel.
-   */
   const next = () => {
     nuevaImagenSeleccionada(indiceSeleccionado, imagenes, true);
   };
 
   return (
     <>
-      <div className='flex flex-col flex-1'>
+      <div className='flex flex-col flex-1 items-center justify-center '>
 
 
-        <div className='h-[50vh] '>
+        <div className='h-[50vh] w-[60vh] flex'>
           <img onLoad={() => setLoaded(true)} className={`${estilos.foto} ${loaded ? estilos.loaded : ""}`} src={imagenSeleccionada} alt="nave de la auxiliar" />
         </div>
 
 
 
-        <div className='flex flex-row p-2 m-auto gap-2'>
-          <button className={`${estilos.btn} btn`} onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
+        <div className='flex flex-row p-4 m-auto gap-4 '>
+          <button className={`${estilos.btn}`} onClick={() => { setAutoPlay(false); previous() }}>{'<'}</button>
+          <button className={`${estilos.btn}`} onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
           <button className={`${estilos.btn} btn`} onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
         </div >
 
-
-
+        <div className='flex flex-row gap-4'>
+          <img className='w-[222px] rounded-lg' src={imagenes[0]} alt="fabrica" />
+          <img className='w-[222px] rounded-lg' src={imagenes[1]} alt="fabrica" />
+          <img className='w-[222px] rounded-lg' src={imagenes[2]} alt="fabrica" />
+          <img className='w-[222px] rounded-lg' src={imagenes[3]} alt="fabrica" />
+          <img className='w-[222px] rounded-lg' src={imagenes[4]} alt="fabrica" />
+        </div>
+        <div>
+          map
+        </div>
       </div >
     </>
   );
