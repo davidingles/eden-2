@@ -3,11 +3,10 @@ import { useState, useEffect } from 'react'
 const cielo2 = '/img/cielo2.jpg'
 const nave = '/img/nave.jpg'
 const lunes = '/img/lunes.jpg'
-const martes = '/img/martes.jpg'
 const nav = '/img/nav.jpg'
 
 export function NosotrosCarruselReact() {
-  const imagenes = [cielo2, nave, lunes, martes, nav];
+  const imagenes = [cielo2, nave, lunes, nav];
   const [indiceSeleccionado, setIndiceSeleccionado] = useState(0);
   const [imagenSeleccionada, setImagenSeleccionada] = useState(imagenes[0]);
   const [loaded, setLoaded] = useState(true);
@@ -51,14 +50,8 @@ export function NosotrosCarruselReact() {
           <button className={`${estilos.btn}`} onClick={() => { setAutoPlay(!autoPlay) }} > {autoPlay === true ? 'STOP' : 'PLAY'}</button>
           <button className={`${estilos.btn} btn`} onClick={() => { setAutoPlay(false); next() }}>{'>'}</button>
         </div >
-        {/* 
-        <div className='flex flex-row gap-4'>
-          <img className='w-[222px] rounded-lg' src={imagenes[0]} alt="fabrica" />
-          <img className='w-[222px] rounded-lg' src={imagenes[1]} alt="fabrica" />
-          <img className='w-[222px] rounded-lg' src={imagenes[2]} alt="fabrica" />
-          <img className='w-[222px] rounded-lg' src={imagenes[3]} alt="fabrica" />
-          <img className='w-[222px] rounded-lg' src={imagenes[4]} alt="fabrica" />
-        </div> */}
+
+        {/* //THUMBANILS ================================== */}
         <div className='flex flex-row gap-4'>
           {imagenes.map((imagen, index) => (
             <div className='flex ' key={index}>

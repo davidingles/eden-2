@@ -35,8 +35,8 @@ export function getStaticPaths() {
 ---
 
 <LayoutCatalogo title={bookData.id}>
-	<article class='flex flex-col'>
-		<div class='bordeVerde flex flex-col'>
+	<article class='flex flex-col overflow-y-auto w-[70%] bordeRojo p-2'>
+		<div class='bordeVerde flex flex-col p-2 m-2'>
 			<a
 				id='
 			anchor'
@@ -50,7 +50,7 @@ export function getStaticPaths() {
 			</div>
 		</div>
 
-		<main class='flex'>
+		<main class='flex flex-row overflow-y-auto w-full p-2 bordeVerde flex-1'>
 			<div class='flex flex-col flex-1'>
 				<div
 					class='bordeRojo h-[350px] flex flex-col justify-center items-center [flex-shrink:1]'
@@ -63,7 +63,7 @@ export function getStaticPaths() {
 				</div>
 				<div class='bordeRojo h-[370px]'>
 					<div
-						class='flex flex-1 justify-center items-center bordeVerde h-[350px] overflow-auto'
+						class='flex flex-1 justify-center items-center h-[350px] overflow-auto'
 					>
 						<ObtenerComponenteJsx
 							componente_jsx={bookData.three}
@@ -76,7 +76,7 @@ export function getStaticPaths() {
 			<div class='bordeRojo flex flex-1'>
 				<video
 					class='object-scale-down h-[700px]'
-					src='/videos/montajes/video1G001.mp4'
+					src={bookData.video}
 					controls
 					autoplay
 					loop
@@ -95,3 +95,5 @@ export function getStaticPaths() {
 		color: black;
 	}
 </style>
+
+<!-- src='/videos/montajes/video1G001.mp4' -->
