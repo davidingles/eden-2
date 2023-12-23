@@ -6,7 +6,8 @@ export const books = [
 		img: '/catalogo/1P0221.png',
 		opinion: 'Bandeja automontable acotada.',
 		author: 'David Inglés',
-		three: 'BandejaAacotada'
+		three: 'BandejaAacotada',
+		categoria: 'Bandejas'
 
 	},
 	{
@@ -15,7 +16,8 @@ export const books = [
 		img: '/catalogo/Estuche tipo ANFORA.png',
 		opinion: '"Estuche practo para el transporte del usuario final',
 		author: 'Vicente Latorre',
-		three: 'EstucheConAsas'
+		three: 'EstucheConAsas',
+		categoria: 'Bandejas'
 
 	},
 	{
@@ -24,7 +26,8 @@ export const books = [
 		img: '/catalogo/3D EXPOSITOR DM.png',
 		opinion: '"Estuche practo para el transporte del usuario final',
 		author: 'Vicente Latorre',
-		three: 'ExpositorDM'
+		three: 'ExpositorDM',
+		categoria: 'expositor'
 
 	},
 	{
@@ -34,7 +37,8 @@ export const books = [
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
 		three: 'Troquel1g0011',
-		video: '/videos/montajes/video1G0011.webm'
+		video: '/videos/montajes/video1G0011.webm',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquel1g0198',
@@ -43,7 +47,8 @@ export const books = [
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
 		three: 'Troquel1g0198',
-		video: '/videos/montajes/video1g0198.mp4'
+		video: '/videos/montajes/video1g0198.mp4',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquel1g0102',
@@ -51,7 +56,8 @@ export const books = [
 		img: '/catalogo/troquel1g0102.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'Troquel1g0102'
+		three: 'Troquel1g0102',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquel1L0024',
@@ -59,7 +65,8 @@ export const books = [
 		img: '/catalogo/troquel1L0024.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'Troquel1L0024'
+		three: 'Troquel1L0024',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquel1P0572',
@@ -67,7 +74,8 @@ export const books = [
 		img: '/catalogo/1P0572.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'Troquel1P0572'
+		three: 'Troquel1P0572',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelComedero',
@@ -75,7 +83,8 @@ export const books = [
 		img: '/catalogo/troquelComedero.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelComedero'
+		three: 'TroquelComedero',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelMesaFeria',
@@ -83,7 +92,8 @@ export const books = [
 		img: '/catalogo/troquelMesaFeria.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelMesaFeria'
+		three: 'TroquelMesaFeria',
+		categoria: 'expositor'
 	},
 	{
 		id: 'troquelMuebleMadera',
@@ -91,7 +101,8 @@ export const books = [
 		img: '/catalogo/troquelMuebleMadera.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelMuebleMadera'
+		three: 'TroquelMuebleMadera',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelMando',
@@ -99,7 +110,8 @@ export const books = [
 		img: '/catalogo/troquelMando.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelMando'
+		three: 'TroquelMando',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelMaleta',
@@ -107,7 +119,8 @@ export const books = [
 		img: '/catalogo/troquelMaleta.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelMaleta'
+		three: 'TroquelMaleta',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelCajaB1',
@@ -115,7 +128,8 @@ export const books = [
 		img: '/catalogo/troquelCajaB1.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelCajaB1'
+		three: 'TroquelCajaB1',
+		categoria: 'Bandejas'
 	},
 	{
 		id: 'troquelCaballete',
@@ -123,7 +137,8 @@ export const books = [
 		img: '/catalogo/troquelCaballete.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'TroquelCaballete'
+		three: 'TroquelCaballete',
+		categoria: 'expositor'
 	},
 	{
 		id: 'troquel4e0066',

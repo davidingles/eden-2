@@ -5,8 +5,17 @@ import SeccionContactos from '@/components/secciones/SeccionContactos.astro'
 
 <Layout title='Contactos de la Auxiliar'>
 	<div
-		class='bordeRojo rounded-lg m-auto w-full flex flex-1 h-full justify-center items-center p-2'
+		class='con bordeRojo rounded-lg m-auto w-full flex flex-1 h-full justify-center items-center p-2'
 	>
 		<SeccionContactos />
 	</div>
 </Layout>
+
+<style>
+	.con {
+		background-color: #202020;
+	}
+	:global(.light) .con {
+		background-color: #fff;
+	}
+</style>

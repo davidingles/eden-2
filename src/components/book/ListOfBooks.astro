@@ -3,25 +3,66 @@ import BookItem from './BookItem.astro'
 import { books } from '../../data/books.js'
 ---
 
-<div class='grid sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center m-auto'>
+<div class='mb-8'>
+	<a
+		class='m-2 p-4 rounded-lg bg-[#222] border-[1px] border-black overflow-y-scroll'
+		href='#expositor'
+	>
+		Expositores</a
+	>
+	<a
+		class='m-2 p-4 rounded-lg bg-[#222] border-[1px] border-black overflow-y-scroll'
+		href='#bandeja'
+	>
+		Estuches</a
+	>
+</div>
+<div
+	id='expositor'
+	class='grid sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center m-auto mb-6'
+>
 	{
-		books.map((book) => {
-			return (
-				<ul class='card aspect-square rounded-lg'>
-					<BookItem
-						id={book.id}
-						title={book.title}
-						img={book.img}
-						three={book.three}
-					/>
-				</ul>
-			)
-		})
+		books
+			.filter((book) => book.categoria === 'expositor')
+			.map((book) => {
+				return (
+					<ul class='card aspect-square rounded-lg'>
+						<BookItem
+							id={book.id}
+							title={book.title}
+							img={book.img}
+							three={book.three}
+						/>
+					</ul>
+				)
+			})
+	}
+</div>
+<div
+	id='bandeja'
+	class='grid sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center m-auto'
+>
+	{
+		books
+			.filter((book) => book.categoria === 'Bandejas')
+			.map((book) => {
+				return (
+					<ul class='card aspect-square rounded-lg'>
+						<BookItem
+							id={book.id}
+							title={book.title}
+							img={book.img}
+							three={book.three}
+						/>
+					</ul>
+				)
+			})
 	}
 </div>
 
 <style>
 	.card {
+		border: solid 1px black;
 		width: auto;
 		height: auto;
 		background: #313131;
