@@ -102,7 +102,7 @@ export const books = [
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
 		three: 'TroquelMuebleMadera',
-		categoria: 'Bandejas'
+		categoria: 'expositor'
 	},
 	{
 		id: 'troquelMando',
