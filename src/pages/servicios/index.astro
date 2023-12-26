@@ -4,7 +4,29 @@ import SeccionVideos from '@/components/secciones/SeccionVideos.astro'
 ---
 
 <Layout title='Servicios de la Auxiliar'>
+	<!-- <video
+		autoplay
+		loop
+		muted
+		class='absolute z-0 w-full h-full object-cover'
+	>
+		<source src='/videos/videosServicios/videoImpresora.webm' />
+	</video> -->
 	<div class='bordeVerde flex flex-col justify-center items-center'>
+		<div class='flex flex-row items-center'>
+			<video
+				controls
+				autoplay
+				loop
+				muted
+				class='w-[66%] aspect-square object-cover flex flex-col justify-center items-center rounded-lg m-2'
+			>
+				<source src='/videos/videosServicios/videoImpresora.webm' />
+			</video>
+			<span class='block w-[55%] bordeRojo p-4'>
+				Impresora flexográfica de 3 cuerpos...
+			</span>
+		</div>
 		<SeccionVideos />
 	</div>
 </Layout>

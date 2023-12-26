@@ -14,24 +14,24 @@ if (!bookData) {
 
 // ESTA FUNCION DE GetStaticPaths() ES NECESARIA PARA HACER EL BUILD
 // ========================================================================
-export function getStaticPaths() {
-	return [
-		{ params: { book: 'B1Cerrada' } },
-		{ params: { book: 'BandejaAacotada' } },
-		{ params: { book: 'EstucheConAsas' } },
-		{ params: { book: 'ExpositorDM' } },
-		{ params: { book: 'troquel1g0011' } },
-	]
-}
-
-//ESTA FUNCION NO SE SI FUNCIONA... SI NO, USA LA DE ARRIBA QUE ESTA COMENTADA
 // export function getStaticPaths() {
-// 	return books.map((book) => ({
-// 		params: {
-// 			book: book.id,
-// 		},
-// 	}))
+// 	return [
+// 		{ params: { book: 'B1Cerrada' } },
+// 		{ params: { book: 'BandejaAacotada' } },
+// 		{ params: { book: 'EstucheConAsas' } },
+// 		{ params: { book: 'ExpositorDM' } },
+// 		{ params: { book: 'troquel1g0011' } },
+// 	]
 // }
+
+// ESTA FUNCION NO SE SI FUNCIONA... SI NO, USA LA DE ARRIBA QUE ESTA COMENTADA
+export function getStaticPaths() {
+	return books.map((book) => ({
+		params: {
+			book: book.id,
+		},
+	}))
+}
 ---
 
 <LayoutCatalogo title={bookData.id}>
